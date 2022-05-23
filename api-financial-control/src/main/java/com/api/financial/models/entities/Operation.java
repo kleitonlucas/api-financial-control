@@ -1,6 +1,6 @@
 package com.api.financial.models.entities;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
-import com.api.financial.models.enums.CategoryType;
+import com.api.financial.models.enums.OperationCategory;
 import com.api.financial.models.enums.OperationType;
 
 import lombok.AllArgsConstructor;
@@ -30,11 +30,11 @@ public class Operation {
 	@Column(nullable = false, name = "type")
 	private OperationType type;
 	@Column(nullable = false, name = "date_operation")
-	private Date dateOperation;
+	private LocalDate dateOperation;
 	@Column(nullable = false, name = "value")
 	private double value;
 	@Column(nullable = false, name = "category")
-	private CategoryType category;
+	private OperationCategory category;
 	@Column(length = 200, name = "description")
 	private String description;
 	@ManyToOne

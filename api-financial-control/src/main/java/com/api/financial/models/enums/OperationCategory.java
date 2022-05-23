@@ -1,6 +1,6 @@
 package com.api.financial.models.enums;
 
-public enum CategoryType {
+public enum OperationCategory {
 	INCOME,
 	HOME,
 	DAILY
